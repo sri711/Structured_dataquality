@@ -1,0 +1,22 @@
+# Data Quality Framework Documentation
+
+## Directory Structure
+Structured
+│
+├── data/
+│   └── monthly_index_202504.xls  # Sample data
+│   └── dummy.csv                 # Test dataset
+│
+├── agents/
+│   ├── base_agent.py            # Abstract base class for all agents
+│   ├── accuracy_agent.py        # Validates data accuracy through type checks
+│   ├── completeness_agent.py    # Checks for missing values
+│   ├── validity_agent.py        # Data type validation
+│   ├── consistency_agent.py     # Statistical consistency checks
+│   ├── uniqueness_agent.py      # Duplicate detection
+│   └── llm_semantic_agent.py    # LLM-based constraint validation
+│
+├── engine/
+│   ├── loader.py               # Data ingestion and preprocessing
+│   ├── evaluator.py            # Agent orchestration
+│   └── .env                    # Configuration (API keys)
